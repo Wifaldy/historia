@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../sequelize";
-import { Mahasiswa } from "./Mahasiswa";
-import { MataKuliah } from "./MataKuliah";
+import { sequelize } from "../sequelize.js";
+import { Mahasiswa } from "./Mahasiswa.js";
+import { MataKuliah } from "./MataKuliah.js";
 
 export class RencanaStudi extends Model {}
 

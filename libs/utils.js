@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
+import path from "path";
 
 const NODE_ENV = process.env.NODE_ENV || "local";
 dotenv.config({
-  path: `../.env.${NODE_ENV}`,
+  path: path.resolve(`.env.${NODE_ENV}`),
   override: true,
 });
 

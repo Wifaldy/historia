@@ -1,4 +1,4 @@
-import { DB_CONFIG } from "../libs/utils";
+import { DB_CONFIG } from "../libs/utils.js";
 import { Sequelize } from "sequelize";
 
 const { db_host, db_name, db_user, db_password } = DB_CONFIG;
@@ -9,7 +9,4 @@ const sequelize = new Sequelize(db_name, db_user, db_password, {
   logging: false,
 });
 
-module.exports = {
-  Sequelize,
-  sequelize,
-};
+export { Sequelize, sequelize };
