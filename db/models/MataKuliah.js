@@ -18,6 +18,14 @@ MataKuliah.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    sks: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    semester: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,

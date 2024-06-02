@@ -1,6 +1,6 @@
 import { Mahasiswa } from "../db/models/index.js";
 
-export class MahasiswaController {
+export default class MahasiswaController {
   static async getAllMahasiswa(req, res) {
     const mahasiswas = await Mahasiswa.findAll();
     res.status(200).json({

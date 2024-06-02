@@ -10,7 +10,7 @@ Mahasiswa.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    npm: {
+    nim: {
       type: DataTypes.STRING,
       allowNull: false,
     },

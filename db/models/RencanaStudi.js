@@ -26,14 +26,6 @@ RencanaStudi.init(
         model: MataKuliah,
       },
     },
-    sks: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    semester: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
   },
   {
     sequelize,
