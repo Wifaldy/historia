@@ -15,15 +15,15 @@ import mysql from "mysql2/promise.js";
   await connection.query(`CREATE DATABASE IF NOT EXISTS ${db_name}`);
   await connection.end();
   console.log("Start Synchronization ");
-  await Mahasiswa.sync({ alter: true });
-  await MataKuliah.sync({ alter: true });
-  await RencanaStudi.sync({ alter: true });
+  await Mahasiswa.sync({ alter: false });
+  await MataKuliah.sync({ alter: false });
+  await RencanaStudi.sync({ alter: false });
   console.log("Finish Synchronization");
 })();
 
-Mahasiswa.hasMany(RencanaStudi, { foreignKey: "mahasiswa_id" });
-RencanaStudi.belongsTo(Mahasiswa, { foreignKey: "mahasiswa_id" });
-MataKuliah.hasMany(RencanaStudi, { foreignKey: "matakuliah_id" });
-RencanaStudi.belongsTo(MataKuliah, { foreignKey: "matakuliah_id" });
+Mahasiswa.hasMany(RencanaStudi, { foreignKey: "mahasiswaId" });
+RencanaStudi.belongsTo(Mahasiswa, { foreignKey: "mahasiswaId" });
+MataKuliah.hasMany(RencanaStudi, { foreignKey: "matakuliahId" });
+RencanaStudi.belongsTo(MataKuliah, { foreignKey: "matakuliahId" });
 
 export { Mahasiswa, MataKuliah, RencanaStudi };

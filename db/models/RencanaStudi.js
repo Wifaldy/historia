@@ -12,14 +12,14 @@ RencanaStudi.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    mahasiswa_id: {
+    mahasiswaId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: Mahasiswa,
       },
     },
-    matakuliah_id: {
+    matakuliahId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

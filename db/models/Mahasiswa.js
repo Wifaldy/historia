@@ -13,6 +13,7 @@ Mahasiswa.init(
     nim: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     nama: {
       type: DataTypes.STRING,
@@ -21,6 +22,7 @@ Mahasiswa.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     prodi: {
       type: DataTypes.STRING,
